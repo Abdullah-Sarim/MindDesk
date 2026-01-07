@@ -34,7 +34,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        
         <Route path="/notes/:id" element={<NoteDetail />} />
+
         <Route
           path="/todos"
           element={
@@ -43,7 +45,14 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/todo" element={<TodoPage />} />
+        <Route
+          path="/todo"
+          element={
+            <ProtectedRoute>
+              <TodoPage />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
 
