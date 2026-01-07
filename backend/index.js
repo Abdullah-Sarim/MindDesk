@@ -16,13 +16,44 @@ const DB_URI = process.env.MONGODB_URI;
 //Middleware to parse cookie and get cross origin access
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors({
-  origin: process.env.FRONTED_URL,
-  credentials: true,
-  methods: "GET, POST, PUT, DELETE",
-  allowedHeaders: ["Content-Type", "Authorization"], // addind other header(extra info sent with request)
-      })
+
+const allowedOrigins = [
+  "http://localhost:3000",
+  "http://localhost:5173",
+  "https://mind-desk.vercel.app",
+  process.env.FRONTEND_URL,
+].filter(Boolean); // removes undefined/null
+
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // allow server-to-server, Postman, mobile apps
+      if (!origin) return callback(null, true);
+
+      // normalize origin (remove trailing slash)
+      const normalizedOrigin = origin.replace(/\/$/, "");
+
+      if (allowedOrigins.includes(normalizedOrigin)) {
+        callback(null, true);
+      } else {
+        callback(
+          new Error(`CORS blocked origin: ${normalizedOrigin}`)
+        );
+      }
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  })
 );
+
+
+// app.use(cors({
+//   origin: process.env.FRONTED_URL,
+//   credentials: true,
+//   methods: "GET, POST, PUT, DELETE",
+//   allowedHeaders: ["Content-Type", "Authorization"], // addind other header(extra info sent with request)
+//       })
+// );
 
 //app.use(cors());
 //Database connection code
