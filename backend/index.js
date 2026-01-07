@@ -38,9 +38,9 @@ app.use("/todo", todoRoute);
 app.use("/user", userRoute);
 app.use("/notes", noteRoute);
 
-// app.get("/", (req, res) => {
-//   res.send("Hello World");
-// });
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 
 
 app.listen(PORT, () => {
