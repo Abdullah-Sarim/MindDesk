@@ -4,7 +4,7 @@ import api from "../api/axios";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import TodoContainer from "../components/Todo/TodoContainer";
-import TodoList from "../components/Todo/Todolist";
+import { TodoList } from "../components/Todo/TodoContainer";
 import CreateToggle from "../components/notesComponents/CreateToggle";
 import CreateNoteForm from "../components/notesComponents/CreateNotesForm";
 import NotesTitleList from "../components/notesComponents/NotesTitleList";

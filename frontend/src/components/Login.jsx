@@ -18,7 +18,11 @@ function Login() {
       toast.success("Login successful");
       navigate("/");
     } catch (error) {
-      toast.error(error?.response?.data?.message || "Login failed");
+      toast.error(
+        error?.response?.data?.message ||
+        error?.response?.data?.errors ||
+        "Login failed"
+      );
     }
   };
 
@@ -36,7 +40,7 @@ function Login() {
 
       >
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-          Welcome To Your Todo👋
+          Welcome To Your Todo
         </h2>
 
         {/* Email */}

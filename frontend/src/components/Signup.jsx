@@ -34,7 +34,7 @@
 //         className="bg-white/95 backdrop-blur-lg p-8 rounded-2xl shadow-2xl w-full max-w-md transition-transform duration-300 hover:scale-[1.02]"
 //       >
 //         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-//           Create Account 🚀
+//           Create Account 
 //         </h2>
 
 //         <input
@@ -109,7 +109,11 @@ function Signup() {
       toast.success("Signup successful");
       navigate("/login");
     } catch (error) {
-      toast.error(error?.response?.data?.message || "Signup failed");
+      toast.error(
+        error?.response?.data?.message ||
+        error?.response?.data?.errors ||
+        "SignUp failed"
+      );
     }
   };
 
@@ -128,7 +132,7 @@ function Signup() {
 
       >
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
-          Create Your Todo Account🚀
+          Create Your Todo Account
         </h2>
 
         {/* Username */}

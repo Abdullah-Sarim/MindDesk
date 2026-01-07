@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 import api from "../../api/axios";
 import CreateNoteModal from "../notesComponents/CreateNoteModal";
 import PriorityBadge from "./PriorityBadge";
-import DeleteConfirmButton from "../DeleteConfirmButton";
+import { DeleteConfirmButton } from "../ConfirmModel";
 
 function TodoItem({ todo, setTodos }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -67,6 +67,7 @@ function TodoItem({ todo, setTodos }) {
     try {
       await api.delete(`/todo/delete/${todo._id}`);
       setTodos((prev) => prev.filter((t) => t?._id !== todo._id));
+      toast.success("Todo deleted");
     } catch {
       toast.error("Failed to delete todo");
     }
@@ -159,7 +160,7 @@ function TodoItem({ todo, setTodos }) {
           onClick={() => setOpenNoteModal(true)}
           className="text-sm text-purple-600 mt-1"
         >
-          📝 Attach note
+          Attach note
         </button>
       )}
 

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import TodoStats from "./charts/TodoStats";
 import TodoChart from "./charts/TodoStatsChart";
 import { useNavigate, useLocation } from "react-router-dom";
-import LogoutConfirmButton from "./LogoutConfirmButton";
+import { LogoutConfirmButton } from "./ConfirmModel";
 
 function Navbar({ user, todos }) {
   const navigate = useNavigate();

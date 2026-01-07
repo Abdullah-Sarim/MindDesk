@@ -25,3 +25,8 @@ dist-ssr
 
 .env
 
+DeleteConfirmButton.jsx
+LogoutConfirmButton.jsx
+TodoList.jsx
+
+

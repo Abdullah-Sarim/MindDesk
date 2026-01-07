@@ -2,7 +2,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../../api/axios";
 import CreateNoteModal from "../notesComponents/CreateNoteModal";
-import DeleteConfirmButton from "../DeleteConfirmButton";
+import { DeleteConfirmButton } from "../ConfirmModel";
 import { useNavigate } from "react-router-dom";
 
 function TodoCard({ todo, setTodos }) {

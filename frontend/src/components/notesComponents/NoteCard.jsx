@@ -2,7 +2,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import api from "../../api/axios";
 import ReactMarkdown from "react-markdown";
-import DeleteConfirmButton from "../DeleteConfirmButton";
+import { DeleteConfirmButton } from "../ConfirmModel";
 
 export default function NoteCard({ note, setNotes, onOpen }) {
   const [isEditing, setIsEditing] = useState(false);
@@ -41,6 +41,7 @@ export default function NoteCard({ note, setNotes, onOpen }) {
   const deleteNote = async () => {
     try {
       await api.delete(`/notes/delete/${note._id}`);
+      toast.success("Note deleted");
       setNotes((prev) => prev.filter((n) => n._id !== note._id));
     } catch {
       toast.error("Failed to delete note");
