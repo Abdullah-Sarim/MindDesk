@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import AuthPage from "./components/AuthPage";
 import PageNotFound from "./components/PageNotFound";
 import { Toaster } from "react-hot-toast";
 import Notes from "./pages/Notes";
@@ -34,7 +35,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
+
         <Route path="/notes/:id" element={<NoteDetail />} />
 
         <Route
@@ -53,8 +54,16 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        {/* <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} /> */}
+
+        <Route path="/auth" element={<AuthPage />} />
+
+        <Route path="/login" element={<Navigate to="/auth" replace />} />
+        <Route
+          path="/signup"
+          element={<Navigate to="/auth?mode=signup" replace />}
+        />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>
