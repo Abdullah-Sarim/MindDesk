@@ -70,7 +70,7 @@ function Notes() {
         className="
     sticky top-0 z-40
     flex justify-between items-center
-    mb-4 sm:px-6 px-2 py-2
+    mb-4 sm:px-6 px-2 py-1.5
     bg-white/70 backdrop-blur-md
     border-b border-gray-200
   "
@@ -98,7 +98,7 @@ function Notes() {
             </button>
           <button
             onClick={() => setShowCreate(true)}
-            className="sm:hidden bg-gray-300 hover:bg-purple-500 text-white px-2 sm:px-4 py-2 ml-1 mr-4 rounded-lg font-semibold transition "
+            className="sm:hidden bg-gray-300 hover:bg-purple-500 text-white px-2.5 sm:px-4 py-2 m-0.5 rounded-lg font-semibold transition "
           >
             ➕
           </button>

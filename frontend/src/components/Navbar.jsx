@@ -35,7 +35,7 @@ function Navbar({ user, todos }) {
   return (
     // <nav className=" top-0 z-40 w-full bg-gray-200 shadow-md px-6 py-3 relative">
 
-    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow px-1 sm:p-2 py-2">
+    <nav className="sticky top-0 z-50 w-full bg-white shadow px-1 sm:p-2 py-2.5">
       {/* Top row */}
       <div className="flex items-center justify-between w-full sm:px-4 px-2">
         {/* LEFT: Logo */}

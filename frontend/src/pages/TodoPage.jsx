@@ -107,7 +107,7 @@ function TodoPage() {
           className="
     sticky top-0 z-40
     flex justify-between items-center
-    mb-2 sm:px-6 px-2 py-2
+    mb-2 sm:px-6 px-2 py-1.5
     bg-white/40 backdrop-blur-md
     border-b border-gray-200
   ">
@@ -125,7 +125,7 @@ function TodoPage() {
             </button>
             <button
               onClick={() => setShowCreate(true)}
-              className="sm:hidden bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold"
+              className="sm:hidden bg-blue-500 hover:bg-blue-600 text-white px-2.5 py-2 rounded-lg font-semibold"
             >
               ➕
             </button>
