@@ -35,12 +35,12 @@ function Navbar({ user, todos }) {
   return (
     // <nav className=" top-0 z-40 w-full bg-gray-200 shadow-md px-6 py-3 relative">
 
-    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow px-1 py-1 sm:p-2.5">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow px-1 sm:p-2 py-2">
       {/* Top row */}
-      <div className="flex items-center justify-between w-full py-1 px-5">
+      <div className="flex items-center justify-between w-full sm:px-4 px-2">
         {/* LEFT: Logo */}
-        <h1 className="text-[19px] sm:text-[25px] font-bold text-blue-600 whitespace-nowrap">
-          Mind Desk
+        <h1 className="text-[22px] sm:text-[26px] font-bold text-blue-600 whitespace-nowrap">
+          MindDesk
         </h1>
 
         <div className="flex gap-2 mx-2">

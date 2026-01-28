@@ -66,18 +66,18 @@ function Notes() {
   return (
     <div className="min-h-screen  bg-gray-100">
       {/* HEADER */}
-      <h2 className="sm:hidden flex justify-center items-center text-3xl font-bold mb-4 text-gray-800">
-        Your Notes
-      </h2>
       <div
         className="
     sticky top-0 z-40
     flex justify-between items-center
-    mb-4 px-3 py-2
+    mb-4 sm:px-6 px-2 py-2
     bg-white/70 backdrop-blur-md
     border-b border-gray-200
   "
       >
+        <h2 className="sm:hidden flex justify-center items-center text-[23px] font-bold mb-2 px-1.5 text-gray-800">
+        Notes
+      </h2>
         <h2 className="hidden sm:block text-[25px] md:text-3xl font-bold text-gray-800">
           Your Notes
         </h2>
@@ -91,8 +91,14 @@ function Notes() {
         <div className="flex items-center justify-between sm:gap-3 gap-1">
           {/* <BackButton className="rounded-lg bg-gray-300 hover:bg-purple-500" /> */}
           <button
+              onClick={() => setShowCreate(true)}
+              className="sm:block hidden bg-gray-300 hover:bg-purple-500 text-black px-4 py-2 rounded-lg font-semibold"
+            >
+              ➕ Note
+            </button>
+          <button
             onClick={() => setShowCreate(true)}
-            className="bg-gray-300 hover:bg-purple-500 text-white px-2.5 sm:px-5 py-2 mr-7 rounded-lg font-semibold transition "
+            className="sm:hidden bg-gray-300 hover:bg-purple-500 text-white px-2 sm:px-4 py-2 ml-1 mr-4 rounded-lg font-semibold transition "
           >
             ➕
           </button>
