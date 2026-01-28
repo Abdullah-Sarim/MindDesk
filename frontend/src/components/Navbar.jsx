@@ -35,11 +35,11 @@ function Navbar({ user, todos }) {
   return (
     // <nav className=" top-0 z-40 w-full bg-gray-200 shadow-md px-6 py-3 relative">
 
-    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow px-5 py-1 sm:p-2.5">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow px-1 py-1 sm:p-2.5">
       {/* Top row */}
-      <div className="flex items-center justify-between w-full md:py-1 px-5">
+      <div className="flex items-center justify-between w-full py-1 px-5">
         {/* LEFT: Logo */}
-        <h1 className="text-[18px] sm:text-[24px] font-bold text-blue-600 whitespace-nowrap">
+        <h1 className="text-[19px] sm:text-[25px] font-bold text-blue-600 whitespace-nowrap">
           Mind Desk
         </h1>
 
@@ -98,7 +98,7 @@ function Navbar({ user, todos }) {
           ref={dropdownRef}
           className={`lg:hidden ${
             open ? "absolute" : "hidden"
-          } top-full mt-6 w-60 sm:w-75 bg-white rounded-xl shadow-lg p-3 space-y-4 animate-slideDown`}
+          } top-full mt-6 w-60 sm:w-75 bg-white rounded-xl shadow-lg p-3 space-y-4 animate-slideDown z-60`}
         >
           {/* User info */}
           {user && (

@@ -38,7 +38,7 @@ function Sidebar({ user, todos }) {
   };
 
   return (
-    <div className="hidden lg:block w-full max-w-lg px-6 py-3 md:w-64 md:top-6 mr-1">
+    <div className="hidden lg:block w-full max-w-lg px-6 py-3 md:w-64 md:top-6 mr-1 ">
       <UserProfile
         user={user}
         isEditingUser={isEditingUser}

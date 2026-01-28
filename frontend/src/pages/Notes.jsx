@@ -66,21 +66,21 @@ function Notes() {
   return (
     <div className="min-h-screen  bg-gray-100">
       {/* HEADER */}
-      <h1 className="sm:hidden flex justify-center items-center text-3xl font-bold mb-4 text-gray-800">
+      <h2 className="sm:hidden flex justify-center items-center text-3xl font-bold mb-4 text-gray-800">
         Your Notes
-      </h1>
+      </h2>
       <div
         className="
-    sticky top-0 z-50
+    sticky top-0 z-40
     flex justify-between items-center
-    mb-4 px-4 py-3
+    mb-4 px-3 py-2
     bg-white/70 backdrop-blur-md
     border-b border-gray-200
   "
       >
-        <h1 className="hidden sm:block text-[25px] md:text-3xl font-bold text-gray-800">
+        <h2 className="hidden sm:block text-[25px] md:text-3xl font-bold text-gray-800">
           Your Notes
-        </h1>
+        </h2>
 
         <input
           value={search}
@@ -89,7 +89,7 @@ function Notes() {
           className="lg:w-150 md:w-80 w-40 px-4 py-2 ml-4 rounded-lg border focus:outline-none focus:ring-2 focus:ring-purple-400"
         />
         <div className="flex items-center justify-between sm:gap-3 gap-1">
-          <BackButton className="rounded-lg bg-gray-300 hover:bg-purple-500" />
+          {/* <BackButton className="rounded-lg bg-gray-300 hover:bg-purple-500" /> */}
           <button
             onClick={() => setShowCreate(true)}
             className="bg-gray-300 hover:bg-purple-500 text-white px-2.5 sm:px-5 py-2 mr-7 rounded-lg font-semibold transition "

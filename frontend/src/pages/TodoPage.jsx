@@ -105,9 +105,9 @@ function TodoPage() {
         {/* HEADER */}
         <div
           className="
-    sticky top-0 z-50
+    sticky top-0 z-40
     flex justify-between items-center
-    mb-2 px-6 py-3
+    mb-2 md:px-6 px-4 py-2
     bg-white/40 backdrop-blur-md
     border-b border-gray-200
   ">
@@ -115,7 +115,7 @@ function TodoPage() {
             <h1 className="text-3xl font-bold text-gray-800">Todos</h1>
           </div>
           <div className="flex items-center gap-3">
-            <BackButton label="Back" className="bg-gray-300" />
+            {/* <BackButton label="Back" className="bg-gray-300" /> */}
             <FocusToggle focusMode={focusMode} setFocusMode={setFocusMode} />
             <button
               onClick={() => setShowCreate(true)}
