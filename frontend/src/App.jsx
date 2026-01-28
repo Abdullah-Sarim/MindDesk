@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
+import Layout from "./components/Layout";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import AuthPage from "./components/AuthPage";
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <Routes>
+      <Route element={<Layout />}>
         <Route
           path="/"
           element={
@@ -54,6 +56,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+         </Route>
         {/* <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} /> */}
 

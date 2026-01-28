@@ -35,12 +35,12 @@ function Navbar({ user, todos }) {
   return (
     // <nav className=" top-0 z-40 w-full bg-gray-200 shadow-md px-6 py-3 relative">
 
-    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow mb-2 px-5 py-1 sm:p-2.5">
+    <nav className="sticky top-0 z-50 w-full bg-white/95 shadow px-5 py-1 sm:p-2.5">
       {/* Top row */}
-      <div className="flex items-center justify-between w-full py-2 px-5">
+      <div className="flex items-center justify-between w-full md:py-1 px-5">
         {/* LEFT: Logo */}
         <h1 className="text-[18px] sm:text-[24px] font-bold text-blue-600 whitespace-nowrap">
-          Todo App
+          Mind Desk
         </h1>
 
         <div className="flex gap-2 mx-2">

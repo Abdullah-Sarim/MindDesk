@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import api from "../api/axios";
-import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import TodoContainer from "../components/Todo/TodoContainer";
 import { TodoList } from "../components/Todo/TodoContainer";
@@ -16,7 +15,7 @@ export default function Home() {
   const [notesLoading, setNotesLoading] = useState(true);
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
-  const [open, setOpen] = useState(false);
+  const [, setOpen] = useState(false);
   const [mode, setMode] = useState("todo");
   const [selectedNote, setSelectedNote] = useState(null);
   const [isNoteOpen, setIsNoteOpen] = useState(false);
@@ -81,8 +80,6 @@ export default function Home() {
           "radial-gradient(circle at top left, rgba(255,255,255,0.16), transparent 50%), linear-gradient(135deg, #6b7280, #111827)",
       }}
     >
-      <Navbar user={user} todos={safeTodos}/>
-
       <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-13 gap-5 p-4 max-w-7xl mx-auto">
         {/* LEFT: SIDEBAR (LG ONLY) */}
         <div className="hidden lg:block lg:col-span-3">
